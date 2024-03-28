@@ -7,6 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+User.create!(name: "Peter", email: "peter@example.com", password: "password", admin: true)
+User.create!(name: "Test", email: "test@example.com", password: "password")
+
 Supplier.create!(name: "Amazon", email: "amazon@example.com", phone_number: "3232323322")
 Supplier.create!(name: "ThinkGeek", email: "thinkgeek@example.com", phone_number: "4232323322")
 
@@ -28,3 +31,17 @@ Image.create!(product_id: 4, url: "http://cdn.shopify.com/s/files/1/0289/1534/pr
 Image.create!(product_id: 5, url: "https://s-media-cache-ak0.pinimg.com/736x/9c/15/7b/9c157bea5331463f9c539cbce739a4b8.jpg")
 Image.create!(product_id: 6, url: "https://createsketchfab.com/blogs/community/wp-content/uploads/2020/04/image2-2.jpg")
 Image.create!(product_id: 7, url: "https://staticdelivery.nexusmods.com/mods/1151/images/12353-0-1461721930.png")
+
+Category.create!(name: "Weapons")
+Category.create!(name: "Star Wars")
+Category.create!(name: "Household goods")
+
+CategoryProduct.create!(category_id: 3, product_id: 1)
+CategoryProduct.create!(category_id: 3, product_id: 2)
+CategoryProduct.create!(category_id: 1, product_id: 3)
+CategoryProduct.create!(category_id: 2, product_id: 3)
+CategoryProduct.create!(category_id: 1, product_id: 4)
+CategoryProduct.create!(category_id: 3, product_id: 5)
+CategoryProduct.create!(category_id: 1, product_id: 6)
+CategoryProduct.create!(category_id: 3, product_id: 7)
+CategoryProduct.create!(category_id: 2, product_id: 7)
